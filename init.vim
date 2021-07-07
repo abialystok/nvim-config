@@ -19,6 +19,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
