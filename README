@@ -1,0 +1,7 @@
+Installations needed:
+
+1. Install nvim 0.5
+2. Install bear
+3. Install vimplug
+4. Install ripgrep for fzf-Rg command
+5. install clangd >= 9 (and any other language servers needed)
