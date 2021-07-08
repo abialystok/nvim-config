@@ -1,4 +1,5 @@
 nnoremap <C-n> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
 " nnoremap <C-m> :NERDTreeFind<CR>
 nnoremap <C-p> :GFiles<CR>
 
@@ -16,7 +17,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'nvim-lua/completion-nvim'
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
@@ -57,6 +58,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
+  require'completion'.on_attach()
+
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
@@ -70,10 +73,19 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
 EOF
 
 let g:gruvbox_italic=1
 colorscheme gruvbox
+
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+" Avoid showing message extra message when using completion
+set shortmess+=c
 
 syntax on
 set nocompatible
