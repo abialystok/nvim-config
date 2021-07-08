@@ -2,6 +2,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 " nnoremap <C-m> :NERDTreeFind<CR>
 nnoremap <C-p> :GFiles<CR>
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
 
 let g:fzf_action = {
 	\ 'ctrl-t': 'tab split',
