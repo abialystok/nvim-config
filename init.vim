@@ -22,6 +22,7 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'psliwka/vim-smoothie'
 
 call plug#end()
 
