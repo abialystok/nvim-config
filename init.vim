@@ -23,6 +23,7 @@ Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'psliwka/vim-smoothie'
+Plug 'Raimondi/delimitMate'
 
 call plug#end()
 
