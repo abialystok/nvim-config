@@ -4,6 +4,19 @@ let NERDTreeQuitOnOpen=1
 nnoremap <C-p> :GFiles<CR>
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
 
+nnoremap <leader><leader>c :ccl<CR>
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
 let g:fzf_action = {
 	\ 'ctrl-t': 'tab split',
 	\ 'ctrl-s': 'split',
