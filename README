@@ -5,3 +5,4 @@ Installations needed:
 3. Install vimplug
 4. Install ripgrep for fzf-Rg command
 5. install clangd >= 9 (and any other language servers needed)
+6. Install a patched font from nerdfonts.com for nvim-tree icons
