@@ -3,6 +3,7 @@
 " " nnoremap <C-m> :NERDTreeFind<CR>
 
 nnoremap <C-p> :GFiles<CR>
+nnoremap <space>b :Buffers<CR>
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
 let g:coq_settings = { 
 	\ 'auto_start': v:true,
